@@ -1,0 +1,15 @@
+[package]
+description = "Logging into system journal based on `RUST_LOG` environment variable"
+edition = "2021"
+license = "MIT"
+name = "journal-env-logger"
+repository = "https://github.com/imbolc/journal-env-logger"
+version = "0.1.0"
+
+[dependencies]
+tracing = "0.1"
+tracing-journald = "0.3"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[dev-dependencies]
+rusty-hook = "0.11"
